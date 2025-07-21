@@ -5,8 +5,6 @@ import type { Error } from '@/shared/httpErrors'
 import { makeServiceRepository } from '@/service/infrastructure/typeorm/typeorm-service.repository'
 // import { pgModel } from '@/models/pg'
 
-// const getAllServices = internetServices.findAllInternetServices(pgModel)
-
 const repo = makeServiceRepository()
 const findAllServices = internetServices.findAllServices(repo)
 

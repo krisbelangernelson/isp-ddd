@@ -1,28 +1,13 @@
 import type { Request, Response } from 'express'
-// import * as customerService from '@/services/customerService'
-// import { errorResponses } from '@/utils/httpErrors/errorResponses'
 import { type Error } from '@/shared/httpErrors'
-// import type { CustomerBody, Login, CustomerExists } from '@/types/customer'
-// import tokenVerification from '@/utils/tokenVerification'
-import { AppDataSource } from '@/infrastructure/database/typeorm/data-source'
-import { Customer } from '@/customer/infrastructure/typeorm/customer.entity'
 import * as customerService from '@/customer/application/customer.service';
 import { makeCustomerRepository } from '@/customer/infrastructure/typeorm/typeorm-customer.repository';
 import { CustomerBody, CustomerExists, Login } from '@/customer/domain/customer';
 import { errorResponses } from '@/shared/httpErrors/errorResponses';
 import tokenVerification from '@/shared/tokenVerification';
 // import { pgModel } from '@/models/pg'
-// import * as customerService from '@/customer/services/customer.service'
-
-// const registerCustomerService = customerService.registerCustomer(pgModel)
-// const loginCustomerService = customerService.loginCustomer(pgModel)
-// const customerExistsService = customerService.customerExists(pgModel)
-// const customerAreaService = customerService.customerArea(pgModel)
-
-// const repo = AppDataSource.getRepository(Customer);
 
 const repo = makeCustomerRepository()
-
 const registerCustomerService = customerService.registerCustomer(repo)
 const loginCustomerService = customerService.loginCustomer(repo)
 const customerExistsService = customerService.customerExists(repo)

@@ -1,7 +1,3 @@
-# Awesome Project Build with TypeORM
+# Internet Service Provider backend API
 
-Steps to run this project:
-
-1. Run `npm i` command
-2. Setup database settings inside `data-source.ts` file
-3. Run `npm start` command
+DDD implementation of the prior microservices layered architecture.

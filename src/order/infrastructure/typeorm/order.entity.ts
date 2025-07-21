@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne } from "typeorm";
 import { OrderState } from "./orderState.entity";
-import { Customer } from "../../../customer/infrastructure/typeorm/customer.entity";
-import { Service } from "../../../service/infrastructure/typeorm/service.entity";
+import { Customer } from "@/customer/infrastructure/typeorm/customer.entity";
+import { Service } from "@/service/infrastructure/typeorm/service.entity";
 
 @Entity()
 export class Order {

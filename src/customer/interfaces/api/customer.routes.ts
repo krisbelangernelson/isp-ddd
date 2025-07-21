@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 import { verifyRegistration, verifyToken } from '@/infrastructure/middlewares'
 import { Router } from 'express'
 import { autoLoginCheck, customerArea, customerExists, loginCustomer, registerCustomer } from './customer.controller'

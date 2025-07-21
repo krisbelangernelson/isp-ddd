@@ -3,7 +3,7 @@ import type { Request, Response } from "express";
 import customerRoutes from "./customer/interfaces/api/customer.routes";
 import stripeRoutes from "./order/interfaces/api/stripe.routes";
 import { createOrder } from "./order/interfaces/api/order.controller";
-import { verifyOrder } from "./infrastructure/middlewares/validations";
+import { verifyOrder } from "./infrastructure/middlewares/verifyOrder";
 import { getInternetServices } from "./service/interfaces/api/service.controller";
 
 const invalidRoute = async (req: Request, res: Response): Promise<Response> => {

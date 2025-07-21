@@ -6,8 +6,6 @@ import { CreateOrderBody } from '@/order/domain/order'
 import { makeOrderRepository } from '@/order/infrastructure/typeorm/typeorm-order.repository'
 // import { pgModel } from '@/models/pg'
 
-// const createOrderService = orderService.createOrder(pgModel)
-
 const repo = makeOrderRepository()
 const createOrderService = orderService.createOrder(repo)
 

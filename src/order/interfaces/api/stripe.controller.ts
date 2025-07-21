@@ -4,7 +4,6 @@ import type { Error } from '@/shared/httpErrors'
 import * as stripeService from '@/order/application/stripe.service'
 import type { PaymentBody } from '@/order/application/stripe.service'
 
-
 const stripeConfig = (_req: Request, res: Response): void => {
   res.send({
     publishableKey: process.env.STRIPE_PUBLISHABLE_KEY

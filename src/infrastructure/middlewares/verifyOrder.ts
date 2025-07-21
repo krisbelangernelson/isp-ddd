@@ -1,8 +1,8 @@
 import type { Request, Response, NextFunction } from 'express'
 import { BadRequestError } from '@/shared/httpErrors'
 import { errorResponses } from '@/shared/httpErrors/errorResponses'
-import { type Error } from '@/shared/httpErrors'
-import { CreateOrderBody } from '@/order/domain/order'
+import type { Error } from '@/shared/httpErrors'
+import type { CreateOrderBody } from '@/order/domain/order'
 
 
 export const verifyOrder = (req: Request, res: Response, next: NextFunction): void => {

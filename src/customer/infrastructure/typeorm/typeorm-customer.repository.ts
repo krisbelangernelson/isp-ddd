@@ -1,6 +1,6 @@
 import { AppDataSource } from "@/infrastructure/database/typeorm/data-source";
 import type { CustomerType } from "@/customer/domain/customer";
-import { CustomerRepository } from "@/customer/domain/customer.repository";
+import type { CustomerRepository } from "@/customer/domain/customer.repository";
 import { Customer } from "./customer.entity";
 
 
