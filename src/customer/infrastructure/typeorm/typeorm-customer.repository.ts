@@ -1,8 +1,7 @@
-import { AppDataSource } from "@/infrastructure/database/typeorm/data-source";
-import type { CustomerType } from "@/customer/domain/customer";
-import type { CustomerRepository } from "@/customer/domain/customer.repository";
-import { Customer } from "./customer.entity";
-
+import { AppDataSource } from '@/infrastructure/database/typeorm/data-source';
+import type { CustomerType } from '@/customer/domain/customer';
+import type { CustomerRepository } from '@/customer/domain/customer.repository';
+import { Customer } from './customer.entity';
 
 export const makeCustomerRepository = (): CustomerRepository => {
   const repo = AppDataSource.getRepository(Customer);
@@ -35,6 +34,6 @@ export const makeCustomerRepository = (): CustomerRepository => {
       const entity = repo.create({ ...customer, id: 0 });
       await repo.save(entity);
       return entity ? toDomain(entity) : null;
-    }
+    },
   };
 };

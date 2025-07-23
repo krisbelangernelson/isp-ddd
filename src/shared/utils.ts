@@ -1,3 +1,4 @@
-import util from 'util'
+import util from 'util';
 
-export const stringifyInspect = (obj: object): string => util.inspect(obj, false, null).toString()
+export const stringifyInspect = (obj: object): string =>
+  util.inspect(obj, false, null).toString();

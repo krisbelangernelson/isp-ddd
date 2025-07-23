@@ -1,6 +1,6 @@
-import { ServiceRepository } from "../domain/service.repository"
+import { ServiceRepository } from '../domain/service.repository';
 
 export const findAllServices = (repo: ServiceRepository) => async () => {
-  const services = await repo.findAll()
-  return services
-}
+  const services = await repo.findAll();
+  return services;
+};

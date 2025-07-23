@@ -1,14 +1,14 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
-import { Service } from "./service.entity";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Service } from './service.entity';
 
 @Entity()
 export class ConnectionType {
-  @PrimaryGeneratedColumn({ type: "smallint" })
+  @PrimaryGeneratedColumn({ type: 'smallint' })
   id: number;
 
-  @Column({ type: "varchar", length: 20, unique: true, nullable: true })
+  @Column({ type: 'varchar', length: 20, unique: true, nullable: true })
   name: string;
 
-  @OneToMany(() => Service, service => service.connectionType)
+  @OneToMany(() => Service, (service) => service.connectionType)
   services: Service[];
 }

@@ -1,6 +1,6 @@
-import moduleAlias from 'module-alias'
-import path from 'path'
+import moduleAlias from 'module-alias';
+import path from 'path';
 
 moduleAlias.addAliases({
-  '@': path.resolve(__dirname, '../../src')
-})
+  '@': path.resolve(__dirname, '../../src'),
+});

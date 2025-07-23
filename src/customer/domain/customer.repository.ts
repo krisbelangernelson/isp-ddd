@@ -1,4 +1,4 @@
-import type { CustomerBody, CustomerType } from "./customer";
+import type { CustomerBody, CustomerType } from './customer';
 
 export type CustomerRepository = {
   findById: (id: number) => Promise<CustomerType | null>;

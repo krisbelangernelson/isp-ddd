@@ -1,5 +1,5 @@
-import { verifyToken } from './verifyToken'
-import * as verifyRegistration from './verifyRegistration'
+import { verifyToken } from './verifyToken';
+import * as verifyRegistration from './verifyRegistration';
 
-export { verifyToken }
-export { verifyRegistration }
+export { verifyToken };
+export { verifyRegistration };

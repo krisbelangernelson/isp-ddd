@@ -1,8 +1,7 @@
-import { AppDataSource } from "@/infrastructure/database/typeorm/data-source";
-import type { OrderType } from "@/order/domain/order";
-import { OrderRepository } from "@/order/domain/order.repository";
-import { Order } from "./order.entity";
-
+import { AppDataSource } from '@/infrastructure/database/typeorm/data-source';
+import type { OrderType } from '@/order/domain/order';
+import { OrderRepository } from '@/order/domain/order.repository';
+import { Order } from './order.entity';
 
 export const makeOrderRepository = (): OrderRepository => {
   const repo = AppDataSource.getRepository(Order);
@@ -25,9 +24,14 @@ export const makeOrderRepository = (): OrderRepository => {
       return entity ? toDomain(entity) : null;
     },
     save: async (order) => {
-      const entity = repo.create({ ...order, state: 2, servicePostalCode: order.postal_code, id: 0 });
+      const entity = repo.create({
+        ...order,
+        state: 2,
+        servicePostalCode: order.postal_code,
+        id: 0,
+      });
       await repo.save(entity);
       return entity ? toDomain(entity) : null;
-    }
+    },
   };
 };
